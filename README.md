@@ -1,5 +1,5 @@
 ![GitHub last commit (master)](https://img.shields.io/github/last-commit/mtucker6784/EncompassRest/master.svg?logo=github&logoColor=lightgray&style=popout-square)
-[![NuGet Version](https://img.shields.io/nuget/v/EncompassRest.svg?style=popout-square&logoColor=lightgray&logo=nuget)](https://www.nuget.org/packages/EncompassRest/)
+<!--[![NuGet Version](https://img.shields.io/nuget/v/EncompassRest.svg?style=popout-square&logoColor=lightgray&logo=nuget)](https://www.nuget.org/packages/EncompassRest/)-->
 [![NuGet Downloads](https://img.shields.io/nuget/dt/EncompassRest.svg?style=popout-square&logoColor=lightgray&logo=nuget)](https://www.nuget.org/packages/EncompassRest/)
 [![Build status](https://img.shields.io/azure-devops/build/tydude4christ/Public/1.svg?style=popout-square&logoColor=lightgray&logo=azuredevops)](https://dev.azure.com/tydude4christ/Public/_build?definitionId=1)
 
