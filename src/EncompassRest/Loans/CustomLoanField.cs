@@ -11,15 +11,29 @@ namespace EncompassRest.Loans
                 var customField = Loan.CustomFields.GetById(FieldId);
                 if (customField != null)
                 {
-                    if (customField.DateValue.HasValue)
+                    if (Descriptor is NonStandardFieldDescriptor && (Descriptor?.Format == Schema.LoanFieldFormat.STRING))
                     {
-                        return customField.DateValue;
+                        //If it is a string, just return the string
+                        return customField.StringValue;
                     }
-                    if (customField.NumericValue.HasValue)
+                    else
+                    if (Descriptor is NonStandardFieldDescriptor && (Descriptor?.Format == Schema.LoanFieldFormat.INTEGER))
                     {
-                        return customField.NumericValue;
+                        //If it is an integer, don't return a double (NumericValue is a double)
+                        return Convert.ToInt32(customField.NumericValue);
                     }
-                    return customField.StringValue;
+                    else
+                    {
+                        if (customField.DateValue.HasValue)
+                        {
+                            return customField.DateValue;
+                        }
+                        if (customField.NumericValue.HasValue)
+                        {
+                            return customField.NumericValue;
+                        }
+                        return customField.StringValue;
+                    }
                 }
                 return null;
             }
@@ -36,6 +50,12 @@ namespace EncompassRest.Loans
                     customField = new CustomField { FieldName = FieldId };
                     Loan.CustomFields.Add(customField);
                 }
+
+                //Dates, numeric values, and strings should all be set as a stringValue without regard to the custom field definition.
+                //Encompass doesn't work with setting a dateValue for a DATE or DATETIME custom field or numericValue for an INTEGER or DECIMAL_2 custom field, it will just null out the value if you try.
+                customField.StringValue = value?.ToString();
+
+                /*
                 if (customField.DateValue.HasValue || customField._dateValue?.Dirty == true)
                 {
                     customField.DateValue = value != null ? Convert.ToDateTime(value) : (DateTime?)null;
@@ -70,6 +90,7 @@ namespace EncompassRest.Loans
                             break;
                     }
                 }
+                */
             }
         }
 

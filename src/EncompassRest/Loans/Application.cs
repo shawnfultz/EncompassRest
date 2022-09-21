@@ -172,7 +172,7 @@ namespace EncompassRest.Loans
         private DirtyValue<decimal?>? _reoTotalMarketValueAmount;
         private DirtyValue<decimal?>? _reoTotalMortgagePaymentsAmount;
         private DirtyValue<decimal?>? _reoTotalMortgagesAndLiensAmount;
-        private DirtyValue<int?>? _reoTotalNetRentalIncomeAmount;
+        private DirtyValue<decimal?>? _reoTotalNetRentalIncomeAmount;
         private DirtyValue<DateTime?>? _rescissionDate;
         private DirtyValue<DateTime?>? _rescissionNoteSignedDate;
         private DirtyList<Residence>? _residences;
@@ -1123,7 +1123,7 @@ namespace EncompassRest.Loans
         /// Income Total Net Rental Income [924]
         /// </summary>
         [LoanFieldProperty(ReadOnly = true)]
-        public int? ReoTotalNetRentalIncomeAmount { get => _reoTotalNetRentalIncomeAmount; set => SetField(ref _reoTotalNetRentalIncomeAmount, value); }
+        public decimal? ReoTotalNetRentalIncomeAmount { get => _reoTotalNetRentalIncomeAmount; set => SetField(ref _reoTotalNetRentalIncomeAmount, value); }
 
         /// <summary>
         /// Correspondent Rescission Date [CORRESPONDENT.X316]
