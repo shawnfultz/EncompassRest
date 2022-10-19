@@ -20,7 +20,8 @@
     <DelaySign>false</DelaySign>
     <AssemblyOriginatorKeyFile>encompassrest.snk</AssemblyOriginatorKeyFile>
     <Nullable>enable</Nullable>
-    <BaseOutputPath>C:\Users\mtucker\Desktop\Change_Tickets\Code\shared-code\NuGet</BaseOutputPath>
+    <BaseOutputPath>C:\miprojects\EncompassRest22.3mtuckerbuild\src\EncompassRest\bin</BaseOutputPath>
+    <Company>maceinno</Company>
   </PropertyGroup>
 
   <ItemGroup>

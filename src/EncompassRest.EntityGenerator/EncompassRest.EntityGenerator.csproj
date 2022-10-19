@@ -23,7 +23,6 @@
     <PackageReference Include="System.ValueTuple" Version="4.5.0" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\EncompassRest.Tests\EncompassRest.Tests.csproj" />
     <ProjectReference Include="..\EncompassRest\EncompassRest.csproj" />
   </ItemGroup>
   <ItemGroup>
