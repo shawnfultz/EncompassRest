@@ -1,1 +1,1 @@
-﻿dotnet nuget push "C:\miprojects\EncompassRest22.3mtuckerbuild\src\EncompassRest\bin\Debug\EncompassRest.1.3.43.nupkg"  --api-key "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" --source "https://nuget.pkg.github.com/shawnfultz/index.json"
+﻿dotnet nuget push "C:\miprojects\EncompassRest22.3mtuckerbuild\src\EncompassRest\bin\Debug\EncompassRest.1.3.43.nupkg"  --api-key "" --source "https://nuget.pkg.github.com/shawnfultz/index.json"
